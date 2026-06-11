@@ -1,4 +1,4 @@
-.PHONY: install dev build preview clean help
+.PHONY: install dev build preview deploy clean help
 
 help: ## Показать список команд
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | \
@@ -15,6 +15,9 @@ build: ## Production-сборка в dist/
 
 preview: ## Preview production-сборки
 	pnpm preview
+
+deploy: build ## Собрать и отправить dist/ на GitHub Pages (через gh-pages)
+	npx gh-pages -d dist -m "deploy [ci skip]"
 
 clean: ## Очистить dist/ и node_modules/
 	rm -rf dist node_modules
