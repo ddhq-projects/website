@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/Users/aa/Projects/ddhq-site"],
+      "transport": "stdio"
+    }
+  }
+}

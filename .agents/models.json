@@ -1,0 +1,13 @@
+{
+  "defaultProvider": "copilot",
+  "presets": {
+    "coding": {
+      "provider": "copilot",
+      "model": "claude-sonnet-4"
+    },
+    "fast": {
+      "provider": "copilot",
+      "model": "gpt-4o-mini"
+    }
+  }
+}
