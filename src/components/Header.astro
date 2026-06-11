@@ -1,0 +1,48 @@
+---
+export interface Props {
+  siteTitle?: string;
+}
+const { siteTitle = 'DDHQ' } = Astro.props;
+---
+
+<header class="sticky top-0 z-50 bg-base-100/80 backdrop-blur border-b border-base-300">
+  <div class="navbar max-w-6xl mx-auto px-4">
+    <div class="navbar-start">
+      <a href="#" class="text-xl font-bold tracking-tight text-primary hover:text-primary-dark transition-colors">
+        {siteTitle}
+      </a>
+    </div>
+
+    <!-- Desktop nav -->
+    <div class="navbar-center hidden lg:flex">
+      <nav class="flex gap-1">
+        <a href="#services" class="btn btn-ghost btn-sm font-medium">Что делаем</a>
+        <a href="#stack" class="btn btn-ghost btn-sm font-medium">Стек</a>
+        <a href="#projects" class="btn btn-ghost btn-sm font-medium">Проекты</a>
+        <a href="#contact" class="btn btn-ghost btn-sm font-medium">Контакты</a>
+      </nav>
+    </div>
+
+    <div class="navbar-end hidden lg:flex">
+      <a href="mailto:m@ddhq.site" class="btn btn-primary btn-sm">Написать нам</a>
+    </div>
+
+    <!-- Mobile burger -->
+    <div class="navbar-end lg:hidden">
+      <div class="dropdown dropdown-end">
+        <label tabindex="0" class="btn btn-ghost btn-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </label>
+        <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 mt-2 border border-base-300">
+          <li><a href="#services">Что делаем</a></li>
+          <li><a href="#stack">Стек</a></li>
+          <li><a href="#projects">Проекты</a></li>
+          <li><a href="#contact">Контакты</a></li>
+          <li><a href="mailto:m@ddhq.site">Написать нам</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>

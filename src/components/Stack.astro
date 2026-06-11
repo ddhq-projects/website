@@ -1,0 +1,45 @@
+---
+const technologies = [
+  { name: 'Astro', href: 'https://astro.build' },
+  { name: 'Next.js', href: 'https://nextjs.org' },
+  { name: 'TypeScript', href: 'https://www.typescriptlang.org' },
+  { name: 'Tailwind CSS', href: 'https://tailwindcss.com' },
+  { name: 'Laravel', href: 'https://laravel.com' },
+  { name: 'PHP', href: 'https://www.php.net' },
+  { name: 'WordPress', href: 'https://wordpress.org' },
+  { name: 'Filament', href: 'https://filamentphp.com' },
+  { name: 'Docker', href: 'https://www.docker.com' },
+  { name: 'PostgreSQL', href: 'https://www.postgresql.org' },
+  { name: 'MySQL', href: 'https://www.mysql.com' },
+  { name: 'Redis', href: 'https://redis.io' },
+  { name: 'Python', href: 'https://www.python.org' },
+  { name: 'Node.js', href: 'https://nodejs.org' },
+  { name: 'Linux', href: 'https://www.linux.org' },
+];
+---
+
+<section id="stack" class="bg-base-200 py-24 md:py-32">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center max-w-xl mx-auto mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-base-content">Технологический стек</h2>
+      <p class="mt-4 text-base-content/60 text-lg">Инструменты, с которыми мы работаем каждый день</p>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-3">
+      {technologies.map((tech) => (
+        <a
+          href={tech.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="badge badge-lg badge-outline hover:badge-primary transition-all cursor-pointer font-medium text-sm px-5 py-5 border-base-300"
+        >
+          {tech.name}
+        </a>
+      ))}
+    </div>
+
+    <p class="text-center text-base-content/40 text-sm mt-12">
+      И это не всё — мы постоянно расширяем стек под конкретные задачи
+    </p>
+  </div>
+</section>
