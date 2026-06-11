@@ -51,6 +51,18 @@ This project follows the [.agents Protocol](https://dotagentsprotocol.com/):
     └── project-arch.md    # architecture decisions
 ```
 
+## Design Context
+
+For ALL styling decisions — colors, typography, spacing, components — always refer to
+**[DESIGN.md](./DESIGN.md)** — the single source of truth for:
+- Color tokens (primary, secondary, accent, semantic)
+- Typography scale and font stack
+- Spacing rhythm and layout rules
+- Component specs (buttons, cards, inputs, badges, code blocks)
+- Do's and Don'ts for visual consistency
+
+Prefer DaisyUI component classes over custom CSS. Never deviate from DESIGN.md tokens.
+
 ## Marketing Context
 
 Before generating any marketing content (landing pages, copy, READMEs), read
